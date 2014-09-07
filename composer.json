@@ -1,0 +1,22 @@
+{
+    "name": "iahvector/twitter-api",
+    "description": "",
+    "authors": [
+        {
+            "name": "iahvector",
+            "email": "iah.vector@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "guzzlehttp/oauth-subscriber": "0.1.x"
+    },
+    "autoload": {
+        "psr-0": {
+            "Iahvector\\TwitterApi": "src/"
+        },
+        "classmap": ["Facades/"]
+    },
+    "minimum-stability": "stable"
+}
