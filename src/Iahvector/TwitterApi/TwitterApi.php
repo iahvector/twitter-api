@@ -125,12 +125,12 @@ class TwitterApi {
         $twitterUser = json_decode($res->getBody(), true);
 
         $result['status'] = 200;
-		$result['twitter_user']['profile_image'] = $twitterUser['profile_image_url'];
-        $result['twitter_user']['profile_background_image'] = $twitterUser['profile_background_image_url'];
+		$result['twitter_user']['profile_image_url'] = $twitterUser['profile_image_url'];
+        $result['twitter_user']['profile_background_image_url'] = $twitterUser['profile_background_image_url'];
         $result['twitter_user']['name'] = $twitterUser['name'];
         $result['twitter_user']['screen_name'] = $twitterUser['screen_name'];
-        $result['twitter_user']['access_token'] = $twitterUser['oauth_token'];
-        $result['twitter_user']['access_token_secret'] = $twitterUser['oauth_token_secret'];
+        $result['twitter_user']['access_token'] = $accessToken;
+        $result['twitter_user']['access_token_secret'] = $accessTokenSecret;
         
         return $result;
 	}
